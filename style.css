@@ -91,11 +91,23 @@ body h5{
 .italic{
 	font-style: italic;
 }
+.blue{
+	color: #009ad0;
+}
+.pink{
+	color: #d5237b;
+}
+.green{
+	color: #acd900;
+}
+.white{
+	color: #fff;
+}
 
 /*NAVIGATION//////////////////////////////////////////////////*/
 .navbar{
-	background: #3E043E !important;
-	border-bottom: 1px solid #A1779D !important;
+	background: #FFF !important;
+	border-bottom: 1px solid #EEE !important;
 }
 .navbar-brand{
 	padding: 12px 15px;
@@ -107,15 +119,15 @@ body h5{
 	padding: 9px 10px !important;
 }
 #navbar>ul>li>a{
-	background: #3E043E !important;
-	color: #A1779D;
+	background: #FFF;
+	color: #555;
 }
 #navbar>ul>li:hover>a {
-	color: #FFF;
+	color: #111;
 }
 .active>a{
 	color: #FFF !important;
-	background: #3E043E !important;
+	background: #009ad0 !important;
 }
 .current-menu-parent>a {
 	color: #FFF !important;
@@ -145,6 +157,23 @@ body h5{
 
 
 /*BANNER//////////////////////////////////////////////////*/
+.banner{
+	height: 500px;
+	width: 100%;
+	background: -moz-linear-gradient(to bottom, rgba(0,0,0,0.0)0%, rgba(0,0,0,0.0)100%), url("img/banner.jpg") center center;
+	background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0.0)0%, rgba(0,0,0,0.0)100%), url("img/banner.jpg") center center;
+	background: -webkit-gradient(linear, center top, center bottom, color-stop(0%,rgba(0,0,0,0.0)), color-stop(100%,rgba(0,0,0,0.0))), url("img/banner.jpg") center center;
+	background: -ms-linear-gradient(to bottom, rgba(0,0,0,0.0)0%, rgba(0,0,0,0.0)100%), url("img/banner.jpg") center center;
+	background: -o-linear-gradient(to bottom, rgba(0,0,0,0.0)0%, rgba(0,0,0,0.0)100%), url("img/banner.jpg") center center;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.0)0%, rgba(0,0,0,0.0)100%), url("img/banner.jpg") center left;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 .banner-a{
 	height: auto;
 	width: 100%;
@@ -163,14 +192,32 @@ body h5{
 }
 
 /*BACKGROUND//////////////////////////////////////////////////*/
+.background-white{
+	background: #FFF;
+}
+.background-yellow{
+	background: #ffca00;
+}
+.background-green{
+	background: #acd900;
+}
+.background-blue{
+	background: #009ad0;
+}
+.background-pink{
+	background: #d5237b;
+}
 .background-light{
-	background: #FEFEFE;
+	background: #F7F7F7;
 }
 .background-gray{
 	background: #F9F9F9;
 }
 .background-dark{
 	background: #333;
+}
+.background-footer{
+	background: #f1f1f1;
 }
 .background-violet-light{
 	background: #3E043E;
@@ -325,21 +372,17 @@ body h5{
 
 
 /*VERTICAL ALIGN//////////////////////////////////////////////////*/
-.vertical-align{
-	position: relative;
+.verticalAlign {
+    display: table; /*no work around with ie7*/
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
-.vertical-align-element{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-moz-transform: translate(-50%,-50%);
-	-webkit-transform: translate(-50%,-50%);
-	-ms-transform: translate(-50%,-50%);
-	-o-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
-	width: 100%;
-	padding: 0;
-	margin: 0;
+
+.verticalAlignElement{
+    display: table-cell; /*no work around with ie7*/
+    /*text-align: center;*/
+    vertical-align: middle;
 }
 
 
@@ -359,10 +402,25 @@ body h5{
 .border-right{
 	border-right: 1px solid #eee;
 }
-
+/*custom borders*/
+.border-top-blue{
+	border-top: 5px solid #009ad0;
+}
+.border-top-pink{
+	border-top: 5px solid #d5237b;
+}
+.border-top-green{
+	border-top: 5px solid #acd900;
+}
+.custom-border-bottom{
+	border-bottom: 3px solid #eee;
+}
 
 /*SPACING//////////////////////////////////////////////////*/
 /*TOP*/
+.space-top{
+	padding-top: 7px;
+}
 .space-top-xs{
 	padding-top: 15px;
 }
@@ -410,6 +468,10 @@ body h5{
 	padding-left: 15px;
 	padding-right: 15px;
 }
+.space-side-lg{
+	padding-left: 88px;
+	padding-right: 88px;
+}
 .space-left{
 	padding-left: 15px;
 }
@@ -419,6 +481,9 @@ body h5{
 /*overall*/
 .space{
 	padding: 15px;
+}
+.custom-space{
+	padding: 50px;
 }
 /*no space*/
 .no-space{
@@ -501,6 +566,26 @@ body h5{
 	margin-right: 0;
 }
 
+/*SCROLL TO TOP//////////////////////////////////////////////////*/
+#to-top {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #009ad0;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 3px;
+}
+#to-top:hover{
+	background-color: #acd900;
+}
+
 /*MEDIA QUERIES//////////////////////////////////////////////////*/
 
 /*extra small*/
@@ -513,14 +598,14 @@ body h5{
 		margin-bottom: 0;
 	}
 	#navbar>ul>li>a{
-		border-top: 1px solid #A1779D;
+		border-top: 1px solid #009ad0;
 	}
 	.navbar-toggle {
 		background: none !important;
-		border: 1px solid #A1779D !important;
+		border: 1px solid #009ad0 !important;
 	}
 	.navbar-toggle .icon-bar{
-		background: #A1779D !important;
+		background: #009ad0 !important;
 	}
 	.banner{
 	}
@@ -542,6 +627,15 @@ body h5{
 	.footer-menu ul{
 		text-align: center;
 	}
+	.verticalAlignElement{
+		text-align: center;
+	}
+	.text-center-mobile{
+		text-align: center;
+	}
+	.affix {
+		position: static;
+	}
 }
 
 /*small*/
@@ -553,11 +647,32 @@ body h5{
 	}
 	.banner{
 	}
+	.no-space-left{
+		padding-left: 15px;
+	}
+	.no-space-right{
+		padding-right: 15px;
+	}
+	.no-gap-left{
+		margin-left: 15px;
+	}
+	.no-gap-right{
+		margin-right: 15px;
+	}
 	.footer-copyright p{
 		text-align: center;
 	}
 	.footer-menu ul{
 		text-align: center;
+	}
+	.verticalAlignElement{
+		text-align: center;
+	}
+	.custom-button{
+		margin-top: -180px;
+	}
+	.affix {
+		position: static;
 	}
 }
 
@@ -576,6 +691,18 @@ body h5{
 	.footer-menu ul{
 		text-align: left;
 	}
+	.verticalAlignElement{
+		text-align: left;
+	}
+	.custom-button{
+		margin-top: -180px;
+	}
+	.affix {
+		top: 100px;
+		z-index: 9999 !important;
+		width: 212px;
+		position: fixed;
+	}
 }
 
 /*large*/
@@ -592,5 +719,17 @@ body h5{
 	}
 	.footer-menu ul{
 		text-align: left;
+	}
+	.verticalAlignElement{
+		text-align: left;
+	}
+	.custom-button{
+		margin-top: -180px;
+	}
+	.affix {
+		top: 100px;
+		z-index: 9999 !important;
+		width: 262px;
+		position: fixed;
 	}
 }

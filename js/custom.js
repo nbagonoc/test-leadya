@@ -48,4 +48,20 @@ $(document).ready(function(){
     });
   }
 
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("to-top").style.display = "block";
+    } else {
+        document.getElementById("to-top").style.display = "none";
+    }
+}
+//scroll to top
+$("a[href='#top']").click(function() {
+   $("html, body").animate({ scrollTop: 0 }, "slow");
+   return false;
+});
+
 });
